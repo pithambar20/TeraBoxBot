@@ -1,0 +1,63 @@
+{
+  "name": "@xbibzlibrary/terabox-xl",
+  "version": "1.0.0",
+  "description": "The ultimate, highly-optimized, and complex Terabox Downloader and Scraper library for Node.js, designed for maximum stability and cross-platform terminal compatibility. Built with modern TypeScript. Supports direct download, HLS stream parsing, and powerful batch processing.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "node --loader ts-node/esm test/manual.test.mjs",
+    "test:unit": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "terabox",
+    "downloader",
+    "scraper",
+    "terabox-downloader",
+    "terabox-scraper",
+    "xbibz",
+    "typescript",
+    "nodejs",
+    "hls",
+    "m3u8",
+    "stream",
+    "download",
+    "parsing"
+  ],
+  "author": "XbibzOfficial <xbibzofficial@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XbibzOfficial/terabox-xl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XbibzOfficial/terabox-xl/issues"
+  },
+  "homepage": "https://github.com/XbibzOfficial/terabox-xl#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.5.0",
+    "vitest": "^1.6.0",
+    "ts-node": "^10.9.2"
+  }
+}
